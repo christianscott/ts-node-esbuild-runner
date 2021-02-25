@@ -1,3 +1,4 @@
+import * as childProc from "child_process";
 import * as crypto from "crypto";
 import * as fs from "fs";
 import * as esbuild from "esbuild";
@@ -72,7 +73,7 @@ function runWithEsbuild({ file, outdir = getDefaultOutdir(file) }: CliArgs) {
     `could not find output file for ${file} (expected ${outfile} to exist inside ${outdir})`
   );
 
-  require(path.join(outdir, outfile));
+  childProc;
 }
 
 function main() {
